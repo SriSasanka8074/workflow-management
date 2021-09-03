@@ -6,7 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start: ionic": "ionic serve",
     "build": "ng build",
+    "build: ionic": "ionic build --prod --aot",
+    "build-copy: android": "ionic capacitor copy android",
+    "build-execute: android": "ionic capacitor run android",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
