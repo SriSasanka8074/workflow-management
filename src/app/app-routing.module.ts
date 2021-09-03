@@ -1,15 +1,21 @@
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'workflow-management',
+    loadChildren: () => import('./pages/workflow-management/workflow-management.module').then( m => m.WorkflowManagementPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/authentication/login/login.module').then( m => m.LoginPageModule),
+    canLoad : [AuthGuard]
   }
 ];
 
