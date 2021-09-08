@@ -1,5 +1,7 @@
 {
   "name": "workflow-management",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

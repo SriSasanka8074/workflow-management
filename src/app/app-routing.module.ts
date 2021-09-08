@@ -10,12 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'workflow-management',
-    loadChildren: () => import('./pages/workflow-management/workflow-management.module').then( m => m.WorkflowManagementPageModule)
+    loadChildren: () => import('./pages/workflow-management/workflow-management.module').then( m => m.WorkflowManagementPageModule),
+    // canLoad : [AuthGuard]
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/authentication/login/login.module').then( m => m.LoginPageModule),
-    canLoad : [AuthGuard]
+    loadChildren: () => import('./pages/authentication/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 
